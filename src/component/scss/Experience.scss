@@ -1,0 +1,159 @@
+@import './global/globalVariables.scss';
+
+.experience-container{
+    .experience{
+        padding-left: 100px;
+
+        @media (max-width: $ex-medium) {
+            padding-left: 0;
+        }
+
+        .experience-content{
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: $medium) {
+                flex-direction: column;
+            }
+
+            .tab-container{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: $pm-2;
+                @media (max-width: $medium) {
+                    flex-direction: row;
+                }
+                @media (max-width: $extraSmall) {
+                    flex-direction: column;
+                }
+
+                button{
+                    background-color: transparent;
+                    color: $color-font;
+                    font-size: 18px;
+                    border: none;
+                    width: 150px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-left: 3px solid rgba($color-band, $alpha: 0.3);
+                    transition: $transition;
+                    transition-delay: 50ms;
+
+                    @media (max-width: $medium) {
+                        border-left: none;
+                        border-bottom: 3px solid rgba($color-band, $alpha: 0.3);
+                    }
+                    @media (max-width: $extraSmall) {
+                        width: auto;
+                        font-size: 16px;
+                        border-bottom: none;
+                        border-left: 3px solid rgba($color-band, $alpha: 0.3);
+                    }
+
+                    &.active{
+                        background-color: rgba($color-band, $alpha: 0.3);
+                        border-color: $color-band;
+
+                        &:hover{
+                            background-color: rgba($color-band, $alpha: 0.3);
+                        }
+                    }
+                    &:hover{
+                        background-color: rgba($color-band, $alpha: 0.1);
+                    }
+                }
+            }
+
+            .job-description{
+                padding-left: $pm-2;
+                flex: 3;
+                @media (max-width: $medium) {
+                    padding-left: 0;
+                }
+
+                h3{
+                    font-family: 'Roboto' sans-serif;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                    letter-spacing: 2px;
+                }
+
+                h5{
+                    font-size: 16px;
+                    font-family: 'Roboto' sans-serif;
+                    font-weight: 300;
+                    background-color: rgba($color-band, $alpha: 0.3);
+                    display: inline-block;
+                    padding: 5px 10px;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                    letter-spacing: 2px;
+                }
+
+                .progress{
+                    padding: 5px;
+                    background-color: rgba($color-band , $alpha: 0.2);
+                    border-radius: 30px;
+                    margin-bottom: 20px;
+                    .progress-bar{
+                        //background-color: rgba($color-band , $alpha: 0.8);
+                        background-color: transparent;
+                        height: 20px;
+                        border-radius: 30px;
+                        //display: flex;
+                        //justify-content: space-between;
+                        overflow: hidden;
+                        position: relative;
+
+                        @media (max-width: $small) {
+                            height: 15px;
+                        }
+
+                        .animated-bar{
+                            position: absolute;
+                            border-radius: 30px;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background-color: rgba($color-band , $alpha: 0.8);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            animation: progressAnimation 2s;
+                            span{
+                                color: $color-bg;
+                                padding: 0 10px;
+                                border-radius: 30px;
+                                font-weight: bold;
+
+                                @media (max-width: $small) {
+                                    font-size: 12px;
+                                    padding: 0 5px;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+
+
+                @keyframes progressAnimation {
+                    0%{
+                        width: 20%;
+                    }
+                    100%{
+                        width: 100%;
+                    }
+                }
+
+                h4{
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}

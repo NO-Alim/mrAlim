@@ -1,0 +1,10 @@
+@import './global/globalVariables.scss';
+
+
+.footer-container{
+    text-align: center;
+
+    &.section-container{
+        padding: $pm-2 0;
+    }
+}

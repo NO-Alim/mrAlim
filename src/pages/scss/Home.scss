@@ -1,0 +1,111 @@
+@import '/src/component/scss/global/globalVariables.scss';
+
+
+.home{
+    min-height: 100vh;
+    position: relative;
+
+    .header-bg-one{
+        position: fixed;
+        top: -300px;
+        left: -5%;
+        width: 110vw;
+        height: 110vw;
+        min-width: 100vh;
+        min-height: 100vh;
+        background: radial-gradient(rgba(6,5,46, 0.8) 0%,
+      rgba(6,5,46, 0.8) 8.3333%,
+      rgba(6, 5, 46, 0.5) 8.3333%,
+      rgba(6, 5, 46, 0.5) 16.6666%,
+      rgba(6,5,46, 0.8) 16.6666%,
+      rgba(6,5,46, 0.8) 25%,
+      rgba(6, 5, 46, 0.5) 25%,
+      rgba(6, 5, 46, 0.5) 33.333%,
+      rgba(6,5,46, 0.8) 33.3333%,
+      rgba(6,5,46, 0.8) 41.666%,
+      rgba(6, 5, 46, 0.5) 41.666%,
+      rgba(6, 5, 46, 0.5) 50%,
+      rgba(6,5,46, 0.8) 50%,
+      rgba(6,5,46, 0.8) 58.333%,
+      rgba(6, 5, 46, 0.4) 58.333%,
+      rgba(6, 5, 46, 0.4) 66.666%,
+      rgba(6,5,46, 0.6) 66.666%,
+      rgba(6,5,46, 0.6) 75%,
+      rgba(6, 5, 46, 0.4) 75%,
+      rgba(6, 5, 46, 0.3) 83.333%,
+      rgba(6,5,46, 0.1) 83.333%,
+      rgba(6,5,46, 0.1) 91.666%,
+      rgba(6, 5, 46, 0.1) 91.666%,
+      rgba(6, 5, 46, 0.1) 100%);
+      background-size: cover;
+      z-index: -10;
+      opacity: 0.5;
+      will-change: transform;
+      @media (max-width: $ex-medium) {
+          top: -200px;
+        }
+        @media (max-width: $medium) {
+            top: 0;
+          }
+    }
+
+    .bg-fixed{
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        background-color: rgba($color-font, $alpha: 0.05);
+        border-radius: 50%;
+        z-index: -10;
+        will-change: transform;
+    }
+
+    .header-bg-two{
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        top: 50%;
+    }
+    .header-bg-three{
+        width: 60px;
+        height: 60px;
+        left: 30%;
+        top: 20%;
+    }
+    .header-bg-three{
+        width: 20px;
+        height: 20px;
+        left: 70%;
+        top: 90%;
+    }
+    .header-bg-four{
+        width: 70px;
+        height: 70px;
+        left: 80%;
+        top: 40%;
+    }
+
+    .header-bg-five{
+        width: 40px;
+        height: 40px;
+        left: 20%;
+        top: 70%;
+    }
+    .header-bg-six{
+        width: 80px;
+        height: 80px;
+        left: 40%;
+        top: 30%;
+    }
+    .header-bg-seven{
+        width: 40px;
+        height: 40px;
+        left: 60%;
+        top: 90%;
+    }
+    .header-bg-eight{
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        top: 20%;
+    }
+}

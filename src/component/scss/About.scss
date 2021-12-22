@@ -1,0 +1,100 @@
+@import './global/globalVariables.scss';
+
+
+.about-container{
+    .flex-container{
+        display: flex;
+
+        @media (max-width: $ex-medium) {
+            flex-direction: column;
+        }
+
+        .flex-item{
+            flex: 1;
+
+            h5,p{
+                margin-bottom: 20px;
+                font-weight: 300;
+            }
+
+            .tech-para{
+                color: #fff;
+                font-weight: 400;
+            }
+
+            &.item-one{
+                order: 2;
+                flex: 2;
+                @media (max-width: $ex-medium) {
+                    order: 2;
+                    flex: 1;
+                }
+
+                .flex-container{
+                    flex-direction: row;
+                    width: 50%;
+                    @media (max-width: $ex-medium) {
+                        width: 100%;
+                    }
+                    @media (max-width: $small) {
+                        flex-direction: column;
+                    }
+
+                    .flex-item{
+                        flex: 1;
+                        &.item-one{
+                            order: 1;
+                        }
+
+                        &.item-two{
+                            order: 2;
+                        }
+
+                        li{
+                            margin-bottom: 10px;
+
+                            span{
+                                color: $color-band;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.item-two{
+                flex: 0.7;
+                margin-left: 50px;
+                
+                @media (max-width: $ex-medium) {
+                    margin-left: 0;
+                    margin-bottom: 30px;
+                }
+
+                .img-container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    @media (max-width: $ex-medium) {
+                        justify-content: center;
+                    }
+
+                    .img-card{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 50%;
+                            border: 5px solid $color-band;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

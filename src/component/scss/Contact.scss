@@ -1,0 +1,200 @@
+@import './global/globalVariables.scss';
+
+
+.contact{
+    display: flex;
+
+    @media (max-width: $medium) {
+        flex-direction: column;
+    }
+    .address{
+        flex: 2;
+
+        @media (max-width: $medium) {
+            flex: 1;
+            margin-bottom: 50px;
+        }
+
+
+        h4{
+            margin-bottom: 10px;
+        }
+
+        .contact-text{
+            font-weight: 300;
+            color: rgba($color-font, $alpha: 0.5);
+            margin-bottom: 30px;
+        }
+
+
+        address{
+            margin-bottom: 30px;
+            .item{
+                display: flex;
+                margin-bottom: 15px;
+
+                .icon{
+                    margin-right: 20px;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        i{
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    strong{
+                        font-weight: 400;
+                        color: rgba($color-font, $alpha: 0.5);
+                    }
+
+                    span{
+                        font-size: 15px;
+
+                        a{
+                            text-transform: lowercase;
+                            @media (max-width: $extraSmall) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .cv-download{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $color-font;
+            border-radius: 5px;
+            min-height: 200px;
+
+            &:hover{
+                a{
+                    color: $color-font;
+                    i{
+                        color: $color-band;
+                    }
+                }
+            }
+            a{
+                color: rgba($color-font, $alpha: 0.5);
+                transition: $transition;
+                cursor: pointer;
+                &:first-child{
+                    margin-bottom: 10px;
+                }
+                i{
+                    font-size: 40px;
+                    color: $color-font;
+                    transition: $transition;
+                }
+            }
+        }
+
+
+
+
+    }
+
+    .mail-form{
+        flex: 3;
+        margin-left: 50px;
+
+        @media (max-width: $medium) {
+            flex: 1;
+            margin-left: 0;
+        }
+        form{
+
+            h4{
+                margin-bottom: 30px;
+            }
+            .col-two{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 30px;
+
+                @media (max-width: $ex-medium) {
+                    flex-direction: column;
+
+                    .item{
+                        width: 100%;
+                    }
+                }
+
+                .item{
+                    flex: 1;
+                    &:first-child{
+                        margin-right: 15px;
+
+                        @media (max-width: $ex-medium) {
+                            margin-right: 0;
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    &:last-child{
+                        margin-left: 15px;
+
+                        @media (max-width: $ex-medium) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .col-one{
+                margin-bottom: 30px;
+
+                input[type = submit]{
+                    width: 150px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 18px;
+                    border: 1px solid $color-band;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    color: $color-band;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.MuiFormLabel-root.Mui-focused {
+    color: $color-band !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: $color-band !important;
+}
+
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: $color-band !important;
+}
+
+.MuiInputBase-input{
+    color: $color-band !important
+}
+
+.MuiFormLabel-root {
+    color: $color-band !important;
+}
+  
