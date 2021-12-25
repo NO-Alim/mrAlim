@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import {FaFacebookF, FaLinkedinIn, FaTwitter, FaGithub} from 'react-icons/fa';
+import Fade from 'react-reveal/Fade'
 import './scss/SocialMedia.scss';
 
 const SocialMedia = () => {
@@ -9,18 +9,26 @@ const SocialMedia = () => {
             <div className="fixed-social">
             <div className="social-container">
                 <ul>
+                    <Fade top delay={100}>
                     <li>
                         <a target='_blank' href="https://www.facebook.com/NoAlimJr/"><FaFacebookF /></a>
                     </li>
+                    </Fade>
+                    <Fade top>
                     <li>
-                        <a target='_blank' href="www.linkedin.com/in/abdul-alim-rakib"><FaLinkedinIn /></a>
+                        <a target='_blank' href="https://www.linkedin.com/in/abdul-alim-rakib"><FaLinkedinIn /></a>
                     </li>
+                    </Fade>
+                    <Fade bottom>
                     <li>
-                        <a href=''><FaTwitter /></a>
+                        <a href='#'><FaTwitter /></a>
                     </li>
+                    </Fade>
+                    <Fade bottom delay={100}>
                     <li>
                         <a target='_blank' href="https://github.com/NO-Alim"><FaGithub /></a>
                     </li>
+                    </Fade>
                 </ul>
             </div>
         </div>

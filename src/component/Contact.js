@@ -6,26 +6,28 @@ import Resume from '../img/Resume.doc';
 
 import emailjs from 'emailjs-com';
 
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
+import Fade from 'react-reveal/Fade';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        width: '100%',
 
-      },
-    },
-  }));
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//       '& > *': {
+//         margin: theme.spacing(1),
+//         width: '100%',
+
+//       },
+//     },
+//   }));
 
 
 
 
 const Contact = () => {
 
-    const classes = useStyles();
+    //const classes = useStyles();
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -47,9 +49,11 @@ const Contact = () => {
                 <div className="contact">
                     <div className="address">
                         <h4 className="h4">Dont't Be Shy!</h4>
-                        <p className='contact-text'>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-
+                        <Fade top>
+                            <p className='contact-text'>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                        </Fade>
                         <address>
+                            <Fade top>
                             <div className="item">
                                 <div className="icon">
                                     <span><i><FaHome /></i></span>
@@ -59,6 +63,8 @@ const Contact = () => {
                                     <span>39 NO. South Halishahar, Chattogram, CTG 400.</span>
                                 </div>
                             </div>
+                            </Fade>
+                            <Fade top>
                             <div className="item">
                                 <div className="icon">
                                     <span><i><FaEnvelope /></i></span>
@@ -68,6 +74,8 @@ const Contact = () => {
                                     <span><a href="mailto:abdulalimrakib53@gmail.com" className="name"><ins>abdulalimrakib53@gmail.com</ins></a></span>
                                 </div>
                             </div>
+                            </Fade>
+                            <Fade top>
                             <div className="item">
                                 <div className="icon">
                                     <span><i><FiPhoneCall /></i></span>
@@ -77,8 +85,8 @@ const Contact = () => {
                                     <span>+8801537-501420</span>
                                 </div>
                             </div>
+                            </Fade>
                         </address>
-
                         <div className="cv-download">
                             <a href={Resume} download='Resume.doc' className='icon'><i><FaDownload /></i></a>
                             <a href={Resume} download='Resume.doc'>DOWNLOAD CV</a>

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link as ScrollLink } from 'react-scroll'
+import Fade from 'react-reveal/Fade'
 import './scss/Header.scss'
 
 const Header = () => {
@@ -7,10 +8,18 @@ const Header = () => {
         <>
             <div className="header-container section-container">
                 <div className="header">
+                    <Fade top>
                     <h5 className="h5">Hello, I'm</h5>
+                    </Fade>
+                    <Fade top>
                     <h1 className="heading">Abdul Alim</h1>
+                    </Fade>
+                    <Fade top>
                     <h3 className="h3">I Help Designers, Small Agencies And Businesses Bring Their Ideas To Life.</h3>
+                    </Fade>
+                    <Fade top>
                     <a href="mailto:abdulalimrakib53@gmail.com" className="btn-btn">Let's Talk</a>
+                    </Fade>
                 </div>
                 <div className="scroll-prompt">
                     <ScrollLink to="about" spy={true} smooth={true} offset={0} duration={500}>

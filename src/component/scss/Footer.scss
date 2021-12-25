@@ -3,8 +3,121 @@
 
 .footer-container{
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
     &.section-container{
         padding: $pm-2 0;
     }
+
+
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        .button {
+            float: left;
+            width: 30px;//6
+            height: 30px;//6
+            cursor: pointer;
+            background: #fff;
+            overflow: hidden;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin: 0 5px;
+        }
+        
+        .button .text {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 30px;//6
+            margin-left: 10px;
+            margin-left: 30px;//6
+        }
+        
+        .button:hover {
+            width: 120px;//200
+        }
+        
+        .button:nth-child(1):hover .icon {
+            background: #e1306c;
+        }
+        
+        .button:nth-child(2):hover .icon {
+            background: #4267b2;
+        }
+        
+        .button:nth-child(3):hover .icon {
+            background: #1da1f2;
+        }
+        
+        .button:nth-child(4):hover .icon {
+            background: #0e76a8;
+        }
+        
+        .button:nth-child(5):hover .icon {
+            background: #333;
+        }
+        
+        .button:nth-child(1) .text {
+            color: #e1306c;
+        }
+        
+        .button:nth-child(2) .text {
+            color: #4267b2;
+        }
+        
+        .button:nth-child(3) .text {
+            color: #1da1f2;
+        }
+        
+        .button:nth-child(4) .text {
+            color: #0e76a8;
+        }
+        
+        .button:nth-child(5) .text {
+            color: #333;
+        }
+        
+        .button .icon {
+            width: 30px;//60
+            height: 30px;//60
+            text-align: center;
+            border-radius: 50px;
+            display: inline;
+            //transition: all 0.3s ease-in-out;
+            float: left;
+            //
+            position: absolute;
+            top: 0;
+            left: 0;
+            //left right , top bottom
+        }
+
+        .button:hover{
+            .icon{
+                left: 0;
+                top: 50%;
+                transform: translate(0,-50%);
+            }
+        }
+        
+        .button .icon i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            line-height: 30px;//60
+            transition: all 0.3s ease-in-out;
+            color: $color-bg;
+        }
+        
+        .button:hover i {
+            color: $color-font;
+        }
+    }
+    
 }

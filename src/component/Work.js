@@ -6,6 +6,10 @@ import Journalist from '../img/jurnalist.png';
 import Fitness from '../img/fitness.png';
 import FoodBlog from '../img/Food-Blog.png'
 import {FaGithub, FaExternalLinkAlt} from 'react-icons/fa';
+
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+
 import './scss/Work.scss';
 
 const porjects = [
@@ -76,34 +80,42 @@ const Work = () => {
                                 return (
                                     <div className="project" key={ind}>
                                         <div className="img-container">
+                                            <Zoom>
                                             <img src={item.img} alt="" />
+                                            </Zoom>
                                         </div>
                                         <div className="description">
                                             <div className="project-about">
                                                 {item.tools.map((tool,toolInd) =>{
                                                     return(
-                                                        <span key={toolInd}>{tool}</span>
+                                                        <Fade right delay={toolInd*50} key={toolInd}><span key={toolInd}>{tool}</span></Fade>
                                                     )
                                                 })}
                                             </div>
                                             <div className="title-container">
+                                                <Fade top>
                                                 <a target='_blink' href={item.visitLink}>
                                                     <h5 className="h5">{item.des}</h5>
                                                 </a>
+                                                </Fade>
                                             </div>
                                             <div className="btn-container">
+                                                <Fade right>
                                                 <div className="button">
                                                     <a target='_blink' href={item.gitLink}>
                                                         <span className='text'>GitHub</span>
                                                         <span className='icon'><FaGithub /></span>
                                                     </a>
                                                 </div>
+                                                </Fade>
+                                                <Fade right delay={150}>
                                                 <div className="button">
                                                     <a target='_blink' href={item.visitLink}>
                                                         <span className='text'>Visit</span>
                                                         <span className='icon'><FaExternalLinkAlt /></span>
                                                     </a>
                                                 </div>
+                                                </Fade>
                                             </div>
                                         </div>
                                     </div>

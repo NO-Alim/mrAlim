@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 import './scss/Experience.scss';
 
 
@@ -30,7 +29,7 @@ const Experience = () => {
     const [skill, setSkill] = useState(ExperienceList);
     const [value, setValue] = useState(0);
 
-    const {id, name, title, skills} = skill[value];
+    const {title, skills} = skill[value];
     
     return (
         <>
@@ -59,15 +58,17 @@ const Experience = () => {
                                             {/* <progress id='file' max='100' value={value[0]}>{value[0]}%</progress> */}
                                             <div className="progress">
                                                 <div className="progress-bar" style={{width: `${value[0]}%`}}>
+                                                    <Fade left>
                                                     <div className="animated-bar">
                                                         <span>{poperty[0]}</span>
                                                         <span>{value[0]}%</span>
                                                     </div>
+                                                    </Fade>
                                                 </div>
                                             </div>
                                         </div>
                                     )
-                                }) : <h4 className='h4'>I've Not Any Formal Job Experience.</h4>}
+                                }) : <Fade top><h4 className='h4'>I've Not Any Formal Job Experience.</h4></Fade>}
                             </div>
                         </article>
                     </div>

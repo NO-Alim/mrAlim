@@ -1,6 +1,7 @@
 import React from 'react';
 import {FaHtml5,FaCss3,FaSass,FaJsSquare,FaReact} from 'react-icons/fa';
 import author from '../img/alim.jpg';
+import Fade from 'react-reveal/Fade'
 import './scss/About.scss';
 
 const About = () => {
@@ -12,10 +13,19 @@ const About = () => {
                 </div>
                 <div className="flex-container">
                     <div className="flex-item item-one">
+                        <Fade top>
                         <h5 className="h5">Hi, I'm Abdul Alim. I'm a Multi-Talented Human With Few Years Of Experiences In Front-End-Developer. I Help Designers, Small Agencies And Businesses Bring Their Ideas To Life.</h5>
+                        </Fade>
+                        <Fade top>
                         <p>I Spent The Last Four Years Working As a Front-End-Developer. I Acquired Project and Time Management Skills, As Well As The Ability To Communicate With Team Members And Clients While Effectively Meeting Milestones And Deadlines. I Have Worked On Multiple Of Responsive Web Design And Development Projects Using: Photoshop, Illustrator, HTML, CSS, Scss, JS, and React.</p>
+                        </Fade>
+                        <Fade top>
                         <p>I am Currently Working Form Home. I am Always Available To Discuss Your Project Over The Phone Or Via Whatsapp. These Days I Enjoy Spending My Free Time Photography, Traveling, and Watching Movie.</p>
+                        </Fade>
+                        <Fade top>
                         <p className='tech-para'>Here are a Few Technologies I've Been Working With Recently :</p>
+                        </Fade>
+                        <Fade top>
                         <div className="technology-list flex-container">
                             <div className="flex-item item-one">
                                 <li><span><FaHtml5/></span> HTML5</li>
@@ -27,6 +37,7 @@ const About = () => {
                                 <li><span><FaReact/></span> React js</li>
                             </div>
                         </div>
+                        </Fade>
                     </div>
                     <div className="flex-item item-two">
                         <div className="img-container">

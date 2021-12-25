@@ -1,4 +1,5 @@
 {
+  "homepage": "https://mralim.com/",
   "name": "mr_alim",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +8,7 @@
     "@emotion/styled": "^11.6.0",
     "@material-ui/core": "^4.12.3",
     "@mui/material": "^5.2.4",
+    "@react-hook/window-size": "^3.0.7",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

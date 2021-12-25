@@ -5,8 +5,10 @@ import { FaDownload, FaTimes } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
 import Headroom from 'react-headroom';
+import { useWindowWidth } from '@react-hook/window-size'
 import './scss/Navbar.scss';
 
+import Fade from 'react-reveal/Fade';
 
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles'
@@ -33,6 +35,8 @@ const Navbar = () => {
     const menuBtnRef = useRef(null);
     const menuRef = useRef(null);
 
+    const width = useWindowWidth();
+
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen)
     };
@@ -51,6 +55,14 @@ const Navbar = () => {
         }
     }
 
+    //for less than medium device
+
+    const mediumWidthDrawerControll = () => {
+        if (width > 768) {
+            setDrawerOpen(false);
+        }
+    }
+
     useEffect(() => {
         document.addEventListener('keydown', toggleDrawerOutClick);
         document.addEventListener('click', handleClick);
@@ -60,6 +72,13 @@ const Navbar = () => {
             document.removeEventListener('click', handleClick);
         }
     });
+
+    useEffect(() => {
+        mediumWidthDrawerControll();
+        return () => {
+            mediumWidthDrawerControll()
+        }
+    },[width]);
 
     const classes = useStyles();
 
@@ -75,22 +94,36 @@ const Navbar = () => {
                         </div>
                         <div className="link-container">
                             <ul>
+                                <Fade left delay={130}>
                                 <li>
                                     <ScrollLink to="header" spy={true} smooth={true} offset={-100} duration={500}>Home</ScrollLink>
                                 </li>
+                                </Fade>
+                                <Fade left  delay={110}>
                                 <li>
                                     <ScrollLink to="about" spy={true} smooth={true} offset={0} duration={500}>About</ScrollLink>
                                 </li>
+                                </Fade>
+                                <Fade left  delay={90}>
                                 <li>
                                     <ScrollLink to="skill" spy={true} smooth={true} offset={0} duration={500}>skill</ScrollLink>
                                 </li>
+                                </Fade>
+                                <Fade left delay={70}>
                                 <li>
                                     <ScrollLink to="work" spy={true} smooth={true} offset={0} duration={500}>work</ScrollLink>
                                 </li>
+                                </Fade>
+                                <Fade left delay={50}>
                                 <li>
                                     <ScrollLink to="contact" spy={true} smooth={true} offset={0} duration={500}>contact</ScrollLink>
                                 </li>
-                                <li><a href={Resume} download='Resume.doc' className="btn-btn">Resume &nbsp; <i><FaDownload /></i></a></li>
+                                </Fade>
+                                <Fade left>
+                                <li>
+                                    <a href={Resume} download='Resume.doc' className="btn-btn">Resume &nbsp; <i><FaDownload /></i></a>
+                                </li>
+                                </Fade>
                             </ul>
                         </div>
                         <div className="menu-container">
