@@ -14,13 +14,13 @@ const About = () => {
                 <div className="flex-container">
                     <div className="flex-item item-one">
                         <Fade top>
-                        <h5 className="h5">Hi, I'm Abdul Alim. I'm a Multi-Talented Human With Few Years Of Experiences In Front-End-Developer. I Help Designers, Small Agencies And Businesses Bring Their Ideas To Life.</h5>
+                        <h5 className="h5">Hi, I'm Abdul Alim. I'm a Multi-Talented Human With a Few Years Of Experiences In Front-End-Development. I Help Designers, Small Agencies And Businesses Bring Their Ideas To Life.</h5>
                         </Fade>
                         <Fade top>
-                        <p>I Spent The Last Four Years Working As a Front-End-Developer. I Acquired Project and Time Management Skills, As Well As The Ability To Communicate With Team Members And Clients While Effectively Meeting Milestones And Deadlines. I Have Worked On Multiple Of Responsive Web Design And Development Projects Using: Photoshop, Illustrator, HTML, CSS, Scss, JS, and React.</p>
+                        <p>I Spent The Last Three Years Working As a Front-End-Developer. I Acquired Project and Time Management Skills, As Well As The Ability To Communicate With Team Members And Clients While Effectively Meeting Milestones And Deadlines. I Have Worked On Multiple Of Responsive Web Design And Development Projects Using: Photoshop, Illustrator, HTML, CSS, Scss, JS, and React.</p>
                         </Fade>
                         <Fade top>
-                        <p>I am Currently Working Form Home. I am Always Available To Discuss Your Project Over The Phone Or Via Whatsapp. These Days I Enjoy Spending My Free Time Photography, Traveling, and Watching Movie.</p>
+                        <p>I am Currently Working From Home. I am Always Available To Discuss Your Project Over The Phone Or Via Whatsapp. These Days I Enjoy Spending My Free Time Photography, Traveling, and Watching Movie.</p>
                         </Fade>
                         <Fade top>
                         <p className='tech-para'>Here are a Few Technologies I've Been Working With Recently :</p>
