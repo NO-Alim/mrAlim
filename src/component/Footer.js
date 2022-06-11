@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className='footer-container section-container'>
             <div className="wrapper">
                 <Fade left delay={100}>
-                <a href='#' className="button">
+                <a target='_blank' href='https://www.instagram.com/mr_a_alim/' className="button">
                     <span className="icon">
                         <i><FaInstagram /></i>
                     </span>
@@ -18,7 +18,7 @@ const Footer = () => {
                 </Fade>
 
                 <Fade left>
-                <a target='_blank' href="https://www.facebook.com/NoAlimJr/" className="button">
+                <a target='_blank' href="https://www.facebook.com/profile.php?id=100006886423514" className="button">
                     <span className="icon">
                         <i><FaFacebookF /></i>
                     </span>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </Fade>
 
                 <Zoom>
-                <a href='#' className="button">
+                <a target='_blank' href='https://twitter.com/AbdulAlimRakib' className="button">
                     <span className="icon">
                         <i><FaTwitter /></i>
                     </span>

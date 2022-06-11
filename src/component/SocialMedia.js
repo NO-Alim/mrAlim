@@ -11,7 +11,7 @@ const SocialMedia = () => {
                 <ul>
                     <Fade top delay={100}>
                     <li>
-                        <a target='_blank' href="https://www.facebook.com/NoAlimJr/"><FaFacebookF /></a>
+                        <a target='_blank' href="https://www.facebook.com/profile.php?id=100006886423514"><FaFacebookF /></a>
                     </li>
                     </Fade>
                     <Fade top>
@@ -21,7 +21,7 @@ const SocialMedia = () => {
                     </Fade>
                     <Fade bottom>
                     <li>
-                        <a href='#'><FaTwitter /></a>
+                        <a target='_blank' href='https://twitter.com/AbdulAlimRakib'><FaTwitter /></a>
                     </li>
                     </Fade>
                     <Fade bottom delay={100}>
